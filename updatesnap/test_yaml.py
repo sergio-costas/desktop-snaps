@@ -62,6 +62,43 @@ class TestYAMLfiles(unittest.TestCase):
                 return False
         return True
 
+
+    def test_lower_than_1(self):
+        # pylint: disable=protected-access
+        """ Tests the "lower-than" option when parsing versions """
+        obj = ProcessVersion(silent=True)
+        entry_format = {"format":"%M.%m.%R", "lower-than": "3"}
+        version = obj._get_version("testpart", "2.43.6", entry_format, False)
+        assert str(version) == "2.43.6"
+
+
+    def test_lower_than_2(self):
+        # pylint: disable=protected-access
+        """ Tests the "lower-than" option when parsing versions """
+        obj = ProcessVersion(silent=True)
+        entry_format = {"format":"%M.%m.%R", "lower-than": "2"}
+        version = obj._get_version("testpart", "2.43.6", entry_format, False)
+        assert version is None
+
+
+    def test_lower_than_3(self):
+        # pylint: disable=protected-access
+        """ Tests the "lower-than" option when parsing versions """
+        obj = ProcessVersion(silent=True)
+        entry_format = {"format":"%M.%m.%R", "lower-than": "2.44"}
+        version = obj._get_version("testpart", "2.43.6", entry_format, False)
+        assert str(version) == "2.43.6"
+
+
+    def test_lower_than_4(self):
+        # pylint: disable=protected-access
+        """ Tests the "lower-than" option when parsing versions """
+        obj = ProcessVersion(silent=True)
+        entry_format = {"format":"%M.%m.%R", "lower-than": "2.43"}
+        version = obj._get_version("testpart", "2.43.6", entry_format, False)
+        assert version is None
+
+
     def test_gnome_calculator_1(self):
         """ tests if it detects the right list of available updates """
         snap, _ = self._load_test_file("gnome-calculator-test1.yaml",
