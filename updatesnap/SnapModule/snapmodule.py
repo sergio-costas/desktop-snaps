@@ -10,10 +10,9 @@ import os
 import datetime
 import sys
 from typing import Optional
+import packaging.version
 import requests
 import yaml
-
-import pkg_resources
 
 class Colors:
     #pylint: disable=too-few-public-methods
@@ -108,10 +107,10 @@ class ProcessVersion:
             if not entry.startswith(part):
                 return None
             entry = entry[len(part):]
-        version = pkg_resources.parse_version(f"{major}.{minor}.{revision}")
+        version = packaging.version.parse(f"{major}.{minor}.{revision}")
 
         if (("lower-than" in entry_format) and
-            (version >= pkg_resources.parse_version(str(entry_format["lower-than"])))):
+            (version >= packaging.version.parse(str(entry_format["lower-than"])))):
             return None
         if self._checkopt("ignore-odd-minor", entry_format) and ((minor % 2) == 1):
             return None
