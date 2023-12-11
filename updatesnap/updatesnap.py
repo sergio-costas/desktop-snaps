@@ -28,7 +28,7 @@ def process_folder(folder_path, arguments) -> tuple[list, bool]:
         retdata = []
         for part in arguments.parts:
             retdata.append(snap.process_part(part))
-        return retdata
+        return retdata, None
     return snap.process_parts()
 
 

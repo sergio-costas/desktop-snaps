@@ -783,11 +783,12 @@ class Snapcraft(ProcessVersion):
             self._print_message(part, f"  {tag['name']} ({tag['date']})\n")
 
     def _print_last_branches(self, part, branches):
-        branches.sort(reverse=True, key=lambda x: x.get('date'))
+        branches.sort(reverse=True, key=lambda x: x.get('date') if 'date' in x else 0)
         branches = branches[:4]
         self._print_message(part, "Last branches:\n")
         for branch in branches:
-            self._print_message(part, f"  {branch['name']} ({branch['date']})\n")
+            if ('name' in branch) and ('date' in branch):
+                self._print_message(part, f"  {branch['name']} ({branch['date']})\n")
 
     def _sort_tags(self, part, current_tag, tags, part_data):
         current_date = None
