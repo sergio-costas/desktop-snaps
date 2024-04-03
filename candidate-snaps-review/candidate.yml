@@ -1,12 +1,12 @@
 cheese: []
 cherrytree: []
-chromium: []
+chromium:
+- 2808
 eog: []
 epiphany:
 - 177
 evince: []
-firefox:
-- 4090
+firefox: []
 five-or-more: []
 gedit: []
 glade: []
@@ -48,10 +48,8 @@ gnome-text-editor:
 - 40
 gtk-common-themes: []
 iagno: []
-kisak-fresh/gaming-graphics-core22:
-- 166
-kisak-turtle/gaming-graphics-core22:
-- 167
+kisak-fresh/gaming-graphics-core22: []
+kisak-turtle/gaming-graphics-core22: []
 libreoffice:
 - 315
 lightsoff: []
