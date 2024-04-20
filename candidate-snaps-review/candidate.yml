@@ -1,13 +1,12 @@
 cheese: []
 cherrytree: []
-chromium:
-- 2828
+chromium: []
 eog: []
 epiphany:
 - 179
 evince: []
 firefox:
-- 4155
+- 4173
 five-or-more: []
 gedit: []
 glade: []
@@ -28,7 +27,7 @@ gnome-characters: []
 gnome-chess: []
 gnome-clocks: []
 gnome-contacts:
-- 238
+- 241
 gnome-dictionary: []
 gnome-font-viewer: []
 gnome-hitori: []
