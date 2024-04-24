@@ -60,7 +60,8 @@ lightsoff: []
 oibaf-latest/gaming-graphics-core22: []
 quadrapassel: []
 snap-store: []
-steam: []
+steam:
+- 191
 swell-foop: []
 tali: []
 thunderbird:
