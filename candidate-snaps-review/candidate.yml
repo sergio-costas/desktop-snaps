@@ -1,7 +1,8 @@
 cheese:
 - 43
 cherrytree: []
-chromium: []
+chromium:
+- 2842
 eog: []
 epiphany: []
 evince:
@@ -40,7 +41,7 @@ gnome-nibbles: []
 gnome-recipes: []
 gnome-robots: []
 gnome-sudoku:
-- 110
+- 112
 gnome-system-monitor: []
 gnome-taquin: []
 gnome-tetravex: []
