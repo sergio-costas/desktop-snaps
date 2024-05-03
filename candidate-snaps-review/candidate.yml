@@ -1,8 +1,7 @@
 cheese:
 - 43
 cherrytree: []
-chromium:
-- 2842
+chromium: []
 eog: []
 epiphany: []
 evince:
@@ -54,7 +53,7 @@ kisak-fresh/gaming-graphics-core22:
 kisak-turtle/gaming-graphics-core22:
 - 168
 libreoffice:
-- 317
+- 319
 lightsoff: []
 oibaf-latest/gaming-graphics-core22: []
 quadrapassel: []
