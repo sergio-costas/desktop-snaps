@@ -1,7 +1,8 @@
 cheese:
 - 43
 cherrytree: []
-chromium: []
+chromium:
+- 2846
 eog: []
 epiphany: []
 evince:
@@ -20,7 +21,8 @@ gnome-3-34-1804-sdk: []
 gnome-3-38-2004: []
 gnome-3-38-2004-sdk: []
 gnome-42-2204: []
-gnome-42-2204-sdk: []
+gnome-42-2204-sdk:
+- 260
 gnome-boxes: []
 gnome-calculator:
 - 959
