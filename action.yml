@@ -53,7 +53,9 @@ runs:
         fi
         if [ -f output_file ]; then
           echo "IS_CHANGE=true" >> $GITHUB_ENV
-          if [ -d snap ]; then
+          if [ -f rockcraft.yaml ]; then
+            mv output_file rockcraft.yaml
+          elif [ -d snap ]; then
             mv output_file snap/snapcraft.yaml
           else
             mv output_file snapcraft.yaml
