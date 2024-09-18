@@ -1,16 +1,14 @@
 cheese:
 - 61
 cherrytree: []
-chromium:
-- 2950
+chromium: []
 eog:
 - 734
 epiphany:
 - 201
 evince:
 - 1056
-firefox:
-- 4955
+firefox: []
 five-or-more:
 - 199
 gedit:
@@ -95,8 +93,7 @@ swell-foop:
 - 120
 tali:
 - 366
-thunderbird:
-- 510
+thunderbird: []
 ubuntu-desktop-bootstrap:
 - 242
 ubuntu-desktop-installer: []
