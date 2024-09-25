@@ -8,7 +8,8 @@ epiphany:
 - 201
 evince:
 - 1056
-firefox: []
+firefox:
+- 5014
 five-or-more:
 - 199
 gedit:
@@ -60,7 +61,8 @@ gnome-mines:
 - 316
 gnome-nibbles:
 - 139
-gnome-recipes: []
+gnome-recipes:
+- 44
 gnome-robots:
 - 123
 gnome-sudoku:
