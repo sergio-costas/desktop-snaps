@@ -2,7 +2,7 @@ cheese:
 - 61
 cherrytree: []
 chromium:
-- 2961
+- 2965
 eog:
 - 734
 epiphany:
@@ -90,6 +90,8 @@ oibaf-latest/gaming-graphics-core22: []
 quadrapassel:
 - 492
 snap-store: []
+snapd-desktop-integration:
+- 241
 steam: []
 swell-foop:
 - 120
