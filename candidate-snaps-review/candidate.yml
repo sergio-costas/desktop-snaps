@@ -8,7 +8,8 @@ epiphany:
 - 201
 evince:
 - 1056
-firefox: []
+firefox:
+- 5091
 five-or-more:
 - 199
 gedit:
@@ -88,7 +89,8 @@ oibaf-latest/gaming-graphics-core22: []
 quadrapassel:
 - 492
 snap-store: []
-snapd-desktop-integration: []
+snapd-desktop-integration:
+- 251
 steam: []
 swell-foop:
 - 120
