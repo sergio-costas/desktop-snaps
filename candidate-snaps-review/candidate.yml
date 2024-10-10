@@ -8,8 +8,7 @@ epiphany:
 - 201
 evince:
 - 1056
-firefox:
-- 5091
+firefox: []
 five-or-more:
 - 199
 gedit:
@@ -90,13 +89,14 @@ quadrapassel:
 - 492
 snap-store: []
 snapd-desktop-integration:
-- 251
+- 253
 steam: []
 swell-foop:
 - 120
 tali:
 - 366
-thunderbird: []
+thunderbird:
+- 532
 ubuntu-desktop-bootstrap:
 - 242
 ubuntu-desktop-installer: []
