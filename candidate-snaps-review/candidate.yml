@@ -26,10 +26,11 @@ gnome-3-34-1804-sdk: []
 gnome-3-38-2004: []
 gnome-3-38-2004-sdk: []
 gnome-42-2204:
-- 185
+- 188
 gnome-42-2204-sdk:
 - 278
-gnome-46-2404: []
+gnome-46-2404:
+- 51
 gnome-46-2404-sdk:
 - 47
 gnome-boxes: []
@@ -75,11 +76,13 @@ gnome-tetravex:
 gnome-text-editor:
 - 44
 gtk-common-themes:
-- 1537
+- 1538
 iagno:
 - 43
-kisak-fresh/gaming-graphics-core22: []
-kisak-turtle/gaming-graphics-core22: []
+kisak-fresh/gaming-graphics-core22:
+- 186
+kisak-turtle/gaming-graphics-core22:
+- 187
 libreoffice:
 - 330
 lightsoff:
@@ -88,15 +91,13 @@ oibaf-latest/gaming-graphics-core22: []
 quadrapassel:
 - 492
 snap-store: []
-snapd-desktop-integration:
-- 253
+snapd-desktop-integration: []
 steam: []
 swell-foop:
 - 120
 tali:
 - 366
-thunderbird:
-- 532
+thunderbird: []
 ubuntu-desktop-bootstrap:
 - 242
 ubuntu-desktop-installer: []
