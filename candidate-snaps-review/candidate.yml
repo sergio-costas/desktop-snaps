@@ -5,7 +5,7 @@ chromium: []
 eog:
 - 734
 epiphany:
-- 201
+- 203
 evince:
 - 1056
 firefox:
@@ -94,7 +94,8 @@ quadrapassel:
 snap-store: []
 snapd-desktop-integration:
 - 264
-steam: []
+steam:
+- 206
 swell-foop:
 - 120
 tali:
