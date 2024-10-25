@@ -9,7 +9,7 @@ epiphany:
 evince:
 - 1056
 firefox:
-- 5155
+- 5187
 five-or-more:
 - 199
 gedit:
@@ -94,8 +94,7 @@ quadrapassel:
 snap-store: []
 snapd-desktop-integration:
 - 264
-steam:
-- 206
+steam: []
 swell-foop:
 - 120
 tali:
