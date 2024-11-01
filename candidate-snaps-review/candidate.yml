@@ -80,9 +80,9 @@ gtk-common-themes:
 iagno:
 - 43
 kisak-fresh/gaming-graphics-core22:
-- 188
+- 190
 kisak-turtle/gaming-graphics-core22:
-- 189
+- 191
 libreoffice:
 - 330
 lightsoff:
@@ -98,8 +98,7 @@ swell-foop:
 - 120
 tali:
 - 366
-thunderbird:
-- 546
+thunderbird: []
 ubuntu-desktop-bootstrap:
 - 242
 ubuntu-desktop-installer: []
