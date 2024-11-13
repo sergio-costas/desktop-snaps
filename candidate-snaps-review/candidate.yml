@@ -1,16 +1,14 @@
 cheese:
 - 61
 cherrytree: []
-chromium:
-- 2993
+chromium: []
 eog:
 - 734
 epiphany:
 - 203
 evince:
 - 1056
-firefox:
-- 5273
+firefox: []
 five-or-more:
 - 199
 gedit:
@@ -94,7 +92,7 @@ quadrapassel:
 - 492
 snap-store: []
 snapd-desktop-integration:
-- 265
+- 270
 steam: []
 swell-foop:
 - 120
