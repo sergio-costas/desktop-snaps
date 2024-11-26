@@ -9,7 +9,7 @@ epiphany:
 evince:
 - 1056
 firefox:
-- 5347
+- 5361
 five-or-more:
 - 199
 gedit:
@@ -62,7 +62,7 @@ gnome-mines:
 gnome-nibbles:
 - 139
 gnome-recipes:
-- 44
+- 47
 gnome-robots:
 - 123
 gnome-sudoku:
@@ -98,7 +98,7 @@ swell-foop:
 tali:
 - 366
 thunderbird:
-- 581
+- 585
 ubuntu-desktop-bootstrap:
 - 242
 ubuntu-desktop-installer: []
