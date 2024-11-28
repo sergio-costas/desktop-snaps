@@ -25,7 +25,7 @@ def process_snap_version_data(upstream_version, snap_name, version_schema, has_u
     if edge_channel_info:
         # Parse the date string using datetime
         snap_build_date = datetime.fromisoformat(edge_channel_info["created-at"]
-                                               .replace("Z", "+00:00"))
+                                                 .replace("Z", "+00:00"))
         snap_build_date = int(snap_build_date.timestamp())
 
     # Time stamp of the last GIT commit of the snapping repository
