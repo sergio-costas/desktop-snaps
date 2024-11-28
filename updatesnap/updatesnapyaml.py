@@ -69,9 +69,9 @@ def main():
                                      description='Find the lastest source'
                                      ' versions for snap files and generates a new snapcraft.yaml.')
     parser.add_argument('--github-user', action='store', default=None,
-                        help='User name for accesing Github projects.')
+                        help='User name for accessing Github projects.')
     parser.add_argument('--github-token', action='store', default=None,
-                        help='Access token for accesing Github projects.')
+                        help='Access token for accessing Github projects.')
     parser.add_argument('--version-schema', action='store', default='None',
                         help='Version schema of snapping repository')
     parser.add_argument('--rock-version-schema', action='store', default='None',
