@@ -88,7 +88,7 @@ def process_rock_version_data(upstream_version, previous_version, version_schema
 def is_version_update(snap, manager_yaml, arguments, has_update):
     """ Returns if snap version update available """
     has_version_update = False
-    if arguments.version_schema == 'None':
+    if arguments.version_schema is None:
         return False
     metadata = snap.process_metadata()
     if process_snap_version_data(metadata['upstream-version'], metadata['name'],
@@ -115,7 +115,7 @@ def is_version_update(snap, manager_yaml, arguments, has_update):
 def is_rock_version_update(rock, manager_yaml, arguments, has_update):
     """ Returns if rock version update available """
     has_version_update = False
-    if arguments.rock_version_schema == 'None':
+    if arguments.rock_version_schema is None:
         return False
     metadata = rock.process_metadata()
     rock_version = process_rock_version_data(metadata['upstream-version'], metadata['version'],
