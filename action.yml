@@ -15,7 +15,6 @@ inputs:
   version-schema:
     description: 'Version schema of snapping repository'
     required: false
-    default: 'None'
   rock-version-schema:
     description: 'Version schema of rock repository'
     required: false
@@ -52,7 +51,7 @@ runs:
     - name: run updatesnapyaml
       id: updatesnapyaml
       run: |
-        ./desktop-snaps/updatesnap/updatesnapyaml.py --github-user $GITHUB_USER --github-token $GITHUB_TOKEN --version-schema $VERSION_SCHEMA --rock-version-schema $ROCK_VERSION_SCHEMA ${YAML_PATH:+--yaml-path $YAML_PATH} https://github.com/${{ github.repository }}
+        ./desktop-snaps/updatesnap/updatesnapyaml.py --github-user $GITHUB_USER --github-token $GITHUB_TOKEN ${VERSION_SCHEMA:+--version-schema $VERSION_SCHEMA} ${ROCK_VERSION_SCHEMA:+--rock-version-schema $ROCK_VERSION_SCHEMA} ${YAML_PATH:+--yaml-path $YAML_PATH} https://github.com/${{ github.repository }}
         # Make sure to put the updated snapcraft.yaml file in the right location if it lives in a snap directory
         if [ -f version_file ]; then
           echo "IS_VERSION_CHANGE=true" >> $GITHUB_ENV
