@@ -10,7 +10,7 @@ import logging
 import requests
 
 
-def process_snap_version_data(upstreamversion, snap_name, version_schema, has_update):
+def process_snap_version_data(upstream_version, snap_name, version_schema, has_update):
     """ Returns processed snap version and grade """
 
     # Time stamp of Snap build in Snap Store
@@ -21,12 +21,12 @@ def process_snap_version_data(upstreamversion, snap_name, version_schema, has_up
     edge_channel_info = next((channel for channel in snap_info["channel-map"]
                               if channel["channel"]["name"] == "edge"
                               and channel["channel"]["architecture"] == "amd64"), None)
-    snapbuilddate = 0
+    snap_build_date = 0
     if edge_channel_info:
         # Parse the date string using datetime
-        snapbuilddate = datetime.fromisoformat(edge_channel_info["created-at"]
-                                               .replace("Z", "+00:00"))
-        snapbuilddate = int(snapbuilddate.timestamp())
+        snap_build_date = datetime.fromisoformat(edge_channel_info["created-at"]
+                                                 .replace("Z", "+00:00"))
+        snap_build_date = int(snap_build_date.timestamp())
 
     # Time stamp of the last GIT commit of the snapping repository
     git_log_output = subprocess.run(['git', 'log', '-1', '--date=unix'],
@@ -36,30 +36,30 @@ def process_snap_version_data(upstreamversion, snap_name, version_schema, has_up
     date_string = date_string.split(':', 1)[1].strip()
 
     # Convert the date string to a Unix timestamp
-    gitcommitdate = int(date_string)
+    git_commit_date = int(date_string)
 
-    prevversion = max(
+    previous_version = max(
         next((channel["version"] for channel in snap_info["channel-map"]
               if channel["channel"]["name"] == "stable")),
         next((channel["version"] for channel in snap_info["channel-map"]
               if channel["channel"]["name"] == "edge"))
     )
 
-    match = re.match(version_schema, upstreamversion)
+    match = re.match(version_schema, upstream_version)
     if not match:
         logging.warning("Version schema does not match with snapping repository version")
         return None
-    upstreamversion = match.group(1).replace('_', '.')
+    upstream_version = match.group(1).replace('_', '.')
 
-    if upstreamversion > prevversion.split('-')[0]:
-        return f"{upstreamversion}-1"
+    if upstream_version > previous_version.split('-')[0]:
+        return f"{upstream_version}-1"
     # Determine package release number
-    if (gitcommitdate > snapbuilddate or has_update):
-        packagerelease = int(prevversion.split('-')[-1]) + 1
+    if (git_commit_date > snap_build_date or has_update):
+        package_release = int(previous_version.split('-')[-1]) + 1
     else:
-        packagerelease = int(prevversion.split('-')[-1])
+        package_release = int(previous_version.split('-')[-1])
 
-    return f"{upstreamversion}-{packagerelease}"
+    return f"{upstream_version}-{package_release}"
 
 
 def process_rock_version_data(upstream_version, previous_version, version_schema, has_update):
@@ -78,11 +78,11 @@ def process_rock_version_data(upstream_version, previous_version, version_schema
         return f"{upstream_version}-1"
     # Determine package release number
     if has_update:
-        packagerelease = int(previous_version.split('-')[-1]) + 1
+        package_release = int(previous_version.split('-')[-1]) + 1
     else:
-        packagerelease = int(previous_version.split('-')[-1])
+        package_release = int(previous_version.split('-')[-1])
 
-    return f"{upstream_version}-{packagerelease}"
+    return f"{upstream_version}-{package_release}"
 
 
 def is_version_update(snap, manager_yaml, arguments, has_update):
